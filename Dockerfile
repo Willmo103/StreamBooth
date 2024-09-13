@@ -1,7 +1,7 @@
 # Dockerfile
 
 # Use the official NVIDIA CUDA base image with CUDA 12.5 and cuDNN 8
-FROM nvidia/cuda:12.5.0-cudnn8-runtime-ubuntu22.04
+FROM nvidia/cuda:12.6.1-cudnn-devel-ubuntu22.04
 
 # Set environment variables to avoid interactive prompts during installation
 ENV DEBIAN_FRONTEND=noninteractive

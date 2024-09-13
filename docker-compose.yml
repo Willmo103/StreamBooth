@@ -1,0 +1,23 @@
+# docker-compose.yml Version: 0.0.1
+
+services:
+  streambooth:
+    build: .
+    image: willmo103/streambooth
+    ports:
+      - "5060:8501"
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+            - driver: nvidia
+            - count: all
+
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./output:/app/output

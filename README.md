@@ -1,5 +1,7 @@
 # StreamBooth
 
+*Version: 0.1.0*
+
 StreamBooth is a Streamlit wrapper to run DreamBooth for training Stable Diffusion models on local hardware.
 
 ## Installation

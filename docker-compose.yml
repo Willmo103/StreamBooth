@@ -14,9 +14,6 @@ services:
         reservations:
           devices:
             - capabilities: [gpu]
-            - driver: nvidia
-            - count: all
-
     volumes:
       - ./data:/app/data
       - ./models:/app/models

@@ -1,11 +1,13 @@
-# docker-compose.yml Version: 0.0.1
+# docker-compose.yml
+
+version: "3.8"
 
 services:
   streambooth:
     build: .
     image: willmo103/streambooth
     ports:
-      - "5060:8501"
+      - "5060:8501" # Maps host port 5060 to container port 8501
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
       - NVIDIA_DRIVER_CAPABILITIES=compute,utility
